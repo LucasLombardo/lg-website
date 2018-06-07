@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
 
 export default class PostPage extends Component {
   render() {
     const { data } = this.props;
+    if (!data) return null;
     return (
       <div>
         <p>{data.markdownRemark.frontmatter.date}</p>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{
-            __html: data.markdownRemark.html
-        }}/> 
+            __html: data.markdownRemark.html,
+        }}
+        />
       </div>
-    )
+    );
   }
 }
 
-//when it is equal to the slug that is coming in, get the data
+// when it is equal to the slug that is coming in, get the data
 export const query = graphql`
     query BlogPostQuery($slug: String!) {
         markdownRemark(fields: {
