@@ -62,7 +62,7 @@ export default class Header extends Component {
         <HeaderContainer>
           <NavBar />
         </HeaderContainer>
-        <Img
+        {/* <Img
           style={{
           position: 'absolute',
           left: 0,
@@ -71,7 +71,7 @@ export default class Header extends Component {
           height: '100%',
         }}
           sizes={data.background.sizes}
-        />
+        /> */}
       </HeaderWrapper>
       /* eslint-enable */
     );
