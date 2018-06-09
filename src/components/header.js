@@ -1,49 +1,23 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-
-import logo from '../images/logo.svg';
+import NavBar from '../components/navbar';
 
 const HeaderWrapper = styled.div`
-  background: #524763;
+  background: #eee;
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
-  height: ${({ isHome }) => (isHome ? '70vh' : '20vh')};
-  h1 {
-    img {
-      height: 80px;
-    }
-  }
+  height: ${({ isHome }) => (isHome ? '60vh' : '50px')};
 `;
 const HeaderContainer = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  height: 100%;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-end;
   z-index: 2;
-`;
-
-const MainNav = styled.nav`
-  ul {
-    list-style: none;
-    display: flex;
-    li {
-      margin-left: 10px;
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      a {
-        text-decoration: none;
-        color: #FFF;
-        &:hover {
-          border-bottom: 3px solid #524763;
-        }
-      }
-    }
-  }
 `;
 
 export default class Header extends Component {
@@ -51,11 +25,11 @@ export default class Header extends Component {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
       if (this.props.location.pathname === '/') {
-        // if swiching to home page, animate the hieght to 70vh
+        // if swiching to home page, animate the hieght to 60vh
         this.wrapper.animate([
           // can set as many frames as you would like, we are just using 2 to animate the vh change
-          { height: '20vh' },
-          { height: '70vh' },
+          { height: '50px' },
+          { height: '60vh' },
         ], {
           // duration is time of animation, fill forwards means it will stay on last frame
           duration: 300,
@@ -64,10 +38,10 @@ export default class Header extends Component {
           iterations: 1,
         });
       } else {
-        // if swiching to another page, animate the hieght to 20vh
+        // if swiching to another page, animate the hieght to 50px
         this.wrapper.animate([
-          { height: '70vh' },
-          { height: '20vh' },
+          { height: '60vh' },
+          { height: '50px' },
         ], {
           duration: 300,
           fill: 'forwards',
@@ -86,37 +60,15 @@ export default class Header extends Component {
       /* eslint-disable */
       <HeaderWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
         <HeaderContainer>
-          <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              <img src={logo} alt="Level Up Logo" />
-            </Link>
-          </h1>
-          <MainNav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </MainNav>
-
+          <NavBar />
         </HeaderContainer>
         <Img
           style={{
           position: 'absolute',
           left: 0,
-          top: 0,
+          bottom: 0,
           width: '100%',
           height: '100%',
-          opacity: 0.3,
         }}
           sizes={data.background.sizes}
         />
