@@ -12,7 +12,7 @@ const albums = [
   ['Truck Lettering', 'truck-lettering', 'https://farm2.staticflickr.com/1183/707471795_04e161f4c9_m.jpg'],
   ['Auto Art', 'auto-art', 'https://farm4.staticflickr.com/3060/2322404488_644db5148a_m.jpg'],
   ['Pinstriping', 'pinstriping', 'https://farm2.staticflickr.com/1174/707493771_91826ed52d_m.jpg'],
-  ['Vehicle Wraps & Large Prints', 'vehicle-wraps', 'https://farm9.staticflickr.com/8108/8452482639_06b6abd809_m.jpg'],
+  ['Vehicle Wraps', 'vehicle-wraps', 'https://farm9.staticflickr.com/8108/8452482639_06b6abd809_m.jpg'],
   ['Motorcycles', 'motorcycles', 'https://farm2.staticflickr.com/1251/707488391_d28dead5f0_m.jpg'],
   ['Flames', 'flames', 'https://farm2.staticflickr.com/1042/707495099_8703e81e3b_m.jpg'],
   ['Fleets of Vehicles', 'fleets-of-vehicles', 'https://farm9.staticflickr.com/8098/8446747361_57a51d5e7d_n.jpg'],

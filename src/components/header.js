@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import NavBar from '../components/navbar';
 
 const HeaderWrapper = styled.div`
-  background: #eee;
+  background: #b2ced7;
   margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
@@ -37,8 +37,9 @@ export default class Header extends Component {
           easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
           iterations: 1,
         });
-      } else {
-        // if swiching to another page, animate the hieght to 50px
+      } else if (prevProps.location.pathname === '/') {
+        // if swiching to another page from the home page, animate the hieght to 50px
+        console.log(prevProps.location.pathname);
         this.wrapper.animate([
           { height: '60vh' },
           { height: '50px' },
@@ -62,7 +63,7 @@ export default class Header extends Component {
         <HeaderContainer>
           <NavBar />
         </HeaderContainer>
-        {/* <Img
+        <Img
           style={{
           position: 'absolute',
           left: 0,
@@ -71,7 +72,7 @@ export default class Header extends Component {
           height: '100%',
         }}
           sizes={data.background.sizes}
-        /> */}
+        />
       </HeaderWrapper>
       /* eslint-enable */
     );

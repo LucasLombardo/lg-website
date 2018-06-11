@@ -2,6 +2,17 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
+
+const StyledNavWrapper = styled.div`
+  height: 50px;
+  width: 100%
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: #b2ced7;
+  border-top: 1px solid #ccc;
+`;
+
 const StyledNav = styled.nav`
   height: 45px;
   display: flex;
@@ -19,7 +30,7 @@ const StyledNav = styled.nav`
     border-bottom: 5px solid rgba(0, 0, 0, 0);
     min-width: 70px;
     text-align: center;
-    -webkit-transition: 0.5s;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     &:hover {
       border-bottom: 5px solid rgba(0, 0, 0, 0.5);
@@ -29,12 +40,14 @@ const StyledNav = styled.nav`
 `;
 
 const NavBar = () => (
-  <StyledNav>
-    <Link to="/"> Home </Link>
-    <Link to="/Gallery"> Gallery </Link>
-    <Link to="/About"> About </Link>
-    <Link to="/Contact"> Contact </Link>
-  </StyledNav>
+  <StyledNavWrapper>
+    <StyledNav>
+      <Link to="/"> Home </Link>
+      <Link to="/Gallery"> Gallery </Link>
+      <Link to="/About"> About </Link>
+      <Link to="/Contact"> Contact </Link>
+    </StyledNav>
+  </StyledNavWrapper>
 );
 
 export default NavBar;

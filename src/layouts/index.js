@@ -18,7 +18,7 @@ const Layout = ({ children, data, location }) => (
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: '70%',
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
       }}
@@ -43,8 +43,8 @@ export const query = graphql`
         desc
       }
     }
-    background: imageSharp(id: {regex: "/lg-logo2.jpg/"}) {
-      sizes(maxWidth: 1240) {
+    background: imageSharp(id: {regex: "/logo1920.jpg/"}) {
+      sizes(maxWidth: 1920) {
         ...GatsbyImageSharpSizes
       }
     }
