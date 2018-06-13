@@ -2,8 +2,7 @@ import React from 'react';
 
 const IndexPage = ({ data }) => (
   <div>
-    <h2>Posts</h2>
-    <hr />
+    <h2>Welcome to LombardoGraphics.com!</h2>
   </div>
 );
 

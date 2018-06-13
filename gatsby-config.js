@@ -26,7 +26,7 @@ module.exports = {
         excerpt_separator: '<!-- end -->',
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
 };
