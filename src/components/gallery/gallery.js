@@ -1,6 +1,18 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Lightbox from 'react-images';
+import styled from 'styled-components';
+
+const StyledImg = styled.img`
+  margin: 2px 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition: .3s ease-in-out;
+  transition: .03s ease-in-out;
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+`;
 
 class Gallery extends Component {
   constructor() {
@@ -62,7 +74,7 @@ class Gallery extends Component {
         key={i}
         onClick={e => this.openLightbox(i, e)}
       >
-        <img src={obj.thumbnail} alt="" />
+        <StyledImg src={obj.thumbnail} alt="" />
       </a>
     ));
 
@@ -94,6 +106,7 @@ class Gallery extends Component {
           spinnerColor={this.props.spinnerColor}
           spinnerSize={this.props.spinnerSize}
           theme={this.props.theme}
+          backdropClosesModal={this.props.backdropClosesModal}
         />
       </div>
     );
@@ -107,6 +120,7 @@ Gallery.propTypes = {
   images: PropTypes.array,
   showThumbnails: PropTypes.bool,
   subheading: PropTypes.string,
+  backdropClosesModal: PropTypes.bool,
 };
 /* eslint-enable */
 
