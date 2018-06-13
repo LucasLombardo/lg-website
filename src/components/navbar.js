@@ -10,7 +10,7 @@ const StyledNavWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   background: #b2ced7;
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #8baeba;
 `;
 
 const StyledNav = styled.nav`

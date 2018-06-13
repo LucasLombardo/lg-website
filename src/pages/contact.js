@@ -1,8 +1,8 @@
 import React from 'react';
 
-const About = () => (
+const Contact = () => (
   <div>
-    <h1>About Us</h1>
+    <h1>Contact</h1>
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
        has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
@@ -15,4 +15,4 @@ const About = () => (
   </div>
 );
 
-export default About;
+export default Contact;
