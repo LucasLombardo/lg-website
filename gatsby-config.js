@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    desc: 'A new blog',
+    title: 'Lombardo Graphics',
+    desc: 'Vehicle Graphics and Sign company located in North Andover, Ma. Service offerings include Automobile and Truck lettering, Pinstriping, Airbrush work, Full Vehicle Wraps, and Custom Motorcycle Art.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

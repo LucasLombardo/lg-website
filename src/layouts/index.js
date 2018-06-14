@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Header from '../components/header';
+import Footer from '../components/footer';
 import './index.css';
 
 const StyledBody = styled.div`
@@ -13,7 +14,7 @@ const StyledBody = styled.div`
   div {
     text-align: center;
   }
-  @media only screen and (max-width: 800px)  {
+  @media only screen and (max-width: 812px)  {
     width: 80%;
   }
   @media only screen and (max-width: 475px)  {
@@ -34,6 +35,7 @@ const Layout = ({ children, data, location }) => (
     <StyledBody>
       {children()}
     </StyledBody>
+    <Footer />
   </div>
 );
 

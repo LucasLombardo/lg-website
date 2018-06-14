@@ -4,11 +4,12 @@ import styled from 'styled-components';
 const StyledFooter = styled.div`
     text-align: center;
     font-size: .8em;
+    padding: 1.2em 0;
 `;
 
-const Footer = ({ siteTitle }) => (
+const Footer = ({ title }) => (
   <StyledFooter>
-        Copyright © {(new Date()).getFullYear()} { siteTitle }. All rights reserved.
+    Copyright © {(new Date()).getFullYear()} Lombardo Graphics. All rights reserved.
   </StyledFooter>
 );
 
