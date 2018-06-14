@@ -33,13 +33,13 @@ const ResponsiveImg = styled(Img)`
   height: 100%;
   width: 100%;
   @media only screen and (max-width: 1280px)  {
-    height: 80%;
+    height: 90%;
   }
   @media only screen and (max-width: 800px)  {
-    height: 60%;
+    height: 82%;
   }
   @media only screen and (max-width: 600px)  {
-    height: 40%;
+    height: 75%;
   }
 `;
 
