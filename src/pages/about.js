@@ -21,15 +21,15 @@ const About = () => (
     <StyledImg src="https://imageshack.com/a/img924/3526/hRvfC1.jpg" alt="Dave Lombardo with his German Shepard" />
     <p>
       Dave graduated from Lesley College of Art and Design in 19??.
-      He is blessed with a wife, Jeanne Lombardo, who helps out with
-      the graphic desing and administration in the business. Outside of
+      He is blessed with a loving wife, Jeanne Lombardo, who helps out with
+      the graphic design and administration parts of the business. Outside of
       work, Dave enjoys working on his 1958 corvette, excercising, and
       walking his German Shepard, Blitz.
     </p>
     <p>
-      You can check out this video of him working on a Hummer for the Boston Bruins:
+      You can check out this video of him working on a Hummer for the Boston Bruins below:
     </p>
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lOYPD5r1Qhc?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
+    <iframe width="560" title="buzz video" height="315" src="https://www.youtube-nocookie.com/embed/lOYPD5r1Qhc?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
   </div>
 );
 
