@@ -1,9 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
 import Header from '../components/header';
 import './index.css';
+
+const StyledBody = styled.div`
+  margin: 0 auto;
+  width: 70%;
+  padding: 0 1em;
+  div {
+    text-align: center;
+  }
+  @media only screen and (max-width: 800px)  {
+    width: 80%;
+  }
+  @media only screen and (max-width: 475px)  {
+    width: 90%;
+  }
+`;
 
 const Layout = ({ children, data, location }) => (
   <div>
@@ -15,16 +31,9 @@ const Layout = ({ children, data, location }) => (
       ]}
     />
     <Header data={data} location={location} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: '70%',
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <StyledBody>
       {children()}
-    </div>
+    </StyledBody>
   </div>
 );
 

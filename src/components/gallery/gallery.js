@@ -12,6 +12,16 @@ const StyledImg = styled.img`
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
   }
+  @media only screen and (max-width: 475px)  {
+    height: 130px;
+    width: 130px; 
+  }
+`;
+
+const StyledGal = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 class Gallery extends Component {
@@ -79,9 +89,9 @@ class Gallery extends Component {
     ));
 
     return (
-      <div>
+      <StyledGal>
         {gallery}
-      </div>
+      </StyledGal>
     );
   }
   /* eslint-enable */
