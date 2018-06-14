@@ -32,7 +32,7 @@ const StyledCol2 = styled.div`
   }
 `;
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <StyledHomepage>
     <StyledCol1>
       <h3>Welcome to LombardoGraphics.com!</h3>
