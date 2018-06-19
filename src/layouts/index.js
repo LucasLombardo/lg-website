@@ -11,6 +11,7 @@ const StyledBody = styled.div`
   margin: 0 auto;
   width: 70%;
   padding: 0 1em;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   div {
     text-align: center;
   }
