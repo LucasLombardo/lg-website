@@ -77,7 +77,7 @@ const IndexPage = () => (
       <h3>Welcome to LombardoGraphics.com!</h3>
       <p>
         We are a vehicle graphics company located in North Andover, Ma. Our
-        service offerings include automobile and truck lettering, hand painted pinstriping,
+        service offerings include truck and automobile lettering, hand painted pinstriping,
         airbrush work, full vehicle wraps, and custom motorcycle art.
       </p>
       <p>
