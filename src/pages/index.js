@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import MapWithAMarker from '../components/map';
-// import facebookBtn from '/static/assets/find-us-on-faceboook.svg';
 
 const StyledHomepage = styled.div`
   display: flex;
@@ -13,7 +12,7 @@ const StyledHomepage = styled.div`
 `;
 
 const StyledCol1 = styled.div`
-  width: 50%;
+  width: 45%;
   h3 {
     text-align: left;
     font-size: 1.5em;
@@ -25,13 +24,18 @@ const StyledCol1 = styled.div`
     text-align: left;
     line-height: 1.55em;
   }
+  #gallery-link {
+    font-size: 1.1em;
+    font-weight: 480;
+    text-align: center;
+  }
   @media only screen and (max-width: 768px)  {
     width: 100%;
   }
 `;
 
 const StyledCol2 = styled.div`
-  width: 50%;
+  width: 55%;
   padding-left: 10%;
   p {
     text-align: left;
@@ -47,11 +51,17 @@ const StyledCol2 = styled.div`
   }
 `;
 
-const StyledFbBtn = styled.img`
-  width: 90%;
-  max-width: 500px;
-  padding: 1em;
+const StyledSocialBtns = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 1em;
+  flex-wrap: wrap;
+`;
+const StyledBtn = styled.img`
+  padding: 1em;
+  margin: 7px;
+  width: 200px;
   border: 2px solid #3b5998;
   border-radius: 1em;
   -webkit-transition: 0.3s;
@@ -74,12 +84,17 @@ const IndexPage = () => (
         Having been in business for over 29 years, we deliver high quality work that can make your
         business stand out among competitors and leave a great first impression.
       </p>
-      <p>
-        But don&#39;t take our word for it, check out our gallery of work <Link to="gallery">HERE</Link>!
+      <p id="gallery-link" >
+        <Link to="gallery">Check out our portfolio of work for some photos!</Link>
       </p>
-      <a href="https://www.facebook.com/LombardoGraphicscom-450098998346458/">
-        <StyledFbBtn src="http://lucaslombardo.com/hosting/find-us-on-facebook.svg" alt="Find us on Facebook" />
-      </a>
+      <StyledSocialBtns>
+        <a href="https://www.facebook.com/LombardoGraphicscom-450098998346458/">
+          <StyledBtn src="http://lucaslombardo.com/hosting/find-us-on-facebook.svg" alt="Find us on Facebook" />
+        </a>
+        <a href="https://www.flickr.com/photos/lombardographics/albums">
+          <StyledBtn src="http://lucaslombardo.com/hosting/follow-flickr.svg" alt="Follow our photostream on Flickr" />
+        </a>
+      </StyledSocialBtns>
     </StyledCol1>
     <StyledCol2>
       <p><strong>Phone: </strong><a href="tel:1-978-688-1230">978-688-1230</a></p>
