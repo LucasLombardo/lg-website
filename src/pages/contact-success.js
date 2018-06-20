@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Contact = () => (
+const ContactSuccess = () => (
   <div>
+    <h1> The form was submitted, Thanks! </h1>
     <form name="contact" method="POST" action="/contact-success" data-netlify="true" netlify>
       <p>
         <label>Your Name: <input type="text" name="name" /></label>
@@ -19,4 +20,4 @@ const Contact = () => (
   </div>
 );
 
-export default Contact;
+export default ContactSuccess;
