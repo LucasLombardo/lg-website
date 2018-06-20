@@ -7,15 +7,23 @@ import MapWithAMarker from '../components/map';
 const StyledHomepage = styled.div`
   display: flex;
   flex-wrap: wrap;
+  p {
+    color: #333;
+  }
 `;
 
 const StyledCol1 = styled.div`
   width: 50%;
   h3 {
     text-align: left;
+    font-size: 1.5em;
+    @media only screen and (max-width: 955px)  {
+      font-size: 1.3em;
+    }
   }
   p {
     text-align: left;
+    line-height: 1.55em;
   }
   @media only screen and (max-width: 768px)  {
     width: 100%;
@@ -28,6 +36,10 @@ const StyledCol2 = styled.div`
   p {
     text-align: left;
     margin: .5rem 0;
+    line-height: 1.3em;
+  }
+  a {
+    color: #333;
   }
   @media only screen and (max-width: 768px)  {
     width: 100%;
@@ -45,7 +57,7 @@ const StyledFbBtn = styled.img`
   -webkit-transition: 0.3s;
   transition: 0.3s;
   &:hover {
-    background-color: #c4cde0;
+    background-color: #b2ced7;
   }
 `;
 
@@ -70,7 +82,7 @@ const IndexPage = () => (
       </a>
     </StyledCol1>
     <StyledCol2>
-      <p><strong>Phone: </strong>978-688-1230</p>
+      <p><strong>Phone: </strong><a href="tel:1-978-688-1230">978-688-1230</a></p>
       <p><strong>Fax: </strong>978-688-0188</p>
       <p><strong>Email: </strong><a href="mailto:lombardo_graphics@verizon.net">lombardo_graphics@verizon.net</a></p>
       <p><strong>Shop address: </strong></p>
