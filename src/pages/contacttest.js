@@ -9,31 +9,30 @@ const ContactTest = () => (
       action="/thanks/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      onSubmit={this.handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact-test" />
       <p hidden>
         <label htmlFor="bot-field">
         Don’t fill this out:{' '}
-          <input name="bot-field" onChange={this.handleChange} />
+          <input name="bot-field" />
         </label>
       </p>
       <p>
         <label htmlFor="name">
         Your name:<br />
-          <input type="text" name="name" onChange={this.handleChange} />
+          <input type="text" name="name" />
         </label>
       </p>
       <p>
         <label htmlFor="email">
         Your email:<br />
-          <input type="email" name="email" onChange={this.handleChange} />
+          <input type="email" name="email" />
         </label>
       </p>
       <p>
         <label htmlFor="message">
         Message:<br />
-          <textarea name="message" onChange={this.handleChange} />
+          <textarea name="message" />
         </label>
       </p>
       <p>
