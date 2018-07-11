@@ -27,8 +27,8 @@ const ContactInfo = () => (
       containerElement={<div style={{ height: '300px' }} />}
       mapElement={<div style={{ height: '100%' }} />}
     />
-    <p><strong>Mailing address: </strong></p>
-    <p>1044 Johnson Street North Andover, MA 01845</p>
+    {/* <p><strong>Mailing address: </strong></p>
+    <p>1044 Johnson Street North Andover, MA 01845</p> */}
   </StyledContactDiv>
 );
 

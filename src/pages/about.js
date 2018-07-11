@@ -69,19 +69,19 @@ const About = () => (
     <p className="center-text">
       Lombardo Graphics is a local business that has been serving the
       Greater Boston area since 1989. It is owned and operated by
-      Dave Lombardo.
+      David Lombardo.
     </p>
     <hr />
-    <StyledImg src="https://imageshack.com/a/img924/3526/hRvfC1.jpg" alt="Dave Lombardo with his German Shepard" />
+    <StyledImg src="https://imageshack.com/a/img924/3526/hRvfC1.jpg" alt="David Lombardo with his German Shepard" />
     <p id="caption">
-      Dave Lombardo (top), Blitz (bottom)
+      David Lombardo (top), Blitz (bottom)
     </p>
     <StyledCard>
       <p>
-        Dave graduated from Lesley College of Art and Design in 19??.
+        David graduated from Butera School of Art and Design in 1989.
         He is blessed with a loving wife, Jeanne Lombardo, who helps out with
         the graphic design and administration parts of the business. Outside of
-        work, Dave enjoys working on his 1958 corvette, excercising, and
+        work, David enjoys working on his 1958 corvette, excercising, and
         walking his German Shepard, Blitz.
       </p>
     </StyledCard>
