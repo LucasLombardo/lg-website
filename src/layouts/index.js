@@ -7,24 +7,29 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import './index.css';
 
+// width should align with both header and footer, update
+// them as well if changing width/media queries
 const StyledBody = styled.div`
-  margin: 0 auto;
-  width: 70%;
-  padding: 0 1em;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  div {
-    text-align: center;
-  }
-  @media only screen and (max-width: 812px)  {
+  text-align: center;
+  padding: 1em;
+
+  width: 75%;
+  max-width: 1264px;
+  margin: 0 auto;
+  @media only screen and (max-width: 1024px) {
     width: 80%;
   }
-  @media only screen and (max-width: 475px)  {
-    width: 90%;
+  @media only screen and (max-width: 768px) {
+    width: 85%;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 100%;
   }
 `;
 
 const Layout = ({ children, data, location }) => (
-  <div>
+  <div style={{ backgroundColor: '#ddd' }}>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[

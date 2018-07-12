@@ -15,26 +15,46 @@ const StyledNavWrapper = styled.div`
 const StyledNav = styled.nav`
   height: 45px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
-  width: 60%;
-  min-width: 320px;
   a {
     text-decoration: none;
     padding-bottom: 6px;
+    min-width: 65px;
+    text-align: center;
     color: #ddd;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: 500;
     font-size: 1.1em;
     border-bottom: 5px solid rgba(0, 0, 0, 0);
-    min-width: 70px;
-    text-align: center;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    margin: 0 0 0 2em;
     &:hover {
       border-bottom: 5px solid rgba(255, 255, 255, 0.5);
       color: #fff;
     }
+    &:first-of-type {
+      margin: 0 auto 0 0;
+    }
+    @media only screen and (max-width: 300px) {
+      margin: 0 auto;
+      min-width: auto;
+      &:first-of-type {
+        margin: 0 auto;
+      }
+    }
+  }
+  width: 75%;
+  max-width: 1264px;
+  margin: 0 auto;
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 85%;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 100%;
   }
 `;
 
@@ -44,7 +64,6 @@ const NavBar = () => (
       <Link to="/"> Home </Link>
       <Link to="/Gallery"> Gallery </Link>
       <Link to="/About"> About </Link>
-      <Link to="/Contact"> Contact </Link>
     </StyledNav>
   </StyledNavWrapper>
 );
