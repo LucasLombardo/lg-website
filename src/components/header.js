@@ -4,68 +4,68 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import NavBar from '../components/navbar';
 
-const HeaderWrapper = styled.div`
-  background: #b2ced7;
-  margin-bottom: 1.45rem;
-  overflow: hidden;
-  position: relative;
-  height: ${({ isHome }) => (isHome ? '55vh' : '50px')};
-  @media only screen and (max-width: 1280px)  {
-    height: ${({ isHome }) => (isHome ? '45vh' : '50px')};
-  }
-  @media only screen and (max-width: 800px)  {
-    height: ${({ isHome }) => (isHome ? '35vh' : '50px')};
-  }
-  @media only screen and (max-width: 600px)  {
-    height: ${({ isHome }) => (isHome ? '200px' : '50px')};
-  }
-`;
-const HeaderContainer = styled.div`
-  height: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  z-index: 2;
-`;
-const ResponsiveImg = styled(Img)`
-  width: 1922px;
-  height: 100%;
+const LogoWrapper = styled.div`
   width: 100%;
-  @media only screen and (max-width: 1280px)  {
-    height: 90%;
+  background-image: url(https://imageshack.com/a/img921/3903/BaMl4X.jpg);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-color: #666;
+  background-size: auto 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${({ isHome }) => (isHome ? '300px' : '0px')};
+  @media only screen and (max-width: 1024px) {
+    height: 225px;
+    img {
+      max-width: 518px;
+    }
+  @media only screen and (max-width: 768px) {
+    height: 150px;
+    img {
+      max-width: 345px;
+    }
   }
-  @media only screen and (max-width: 800px)  {
-    height: 82%;
+`;
+
+const ImgWrapper = styled.div`
+  width: 690px;
+  height: 300px;
+  @media only screen and (max-width: 1024px) {
+    height: 225px;
+    width: 518px;
+  @media only screen and (max-width: 768px) {
+    height: 150px;
+    width: 345px;
   }
-  @media only screen and (max-width: 600px)  {
-    height: 75%;
+  @media only screen and (max-width: 360px) {
+    height: 80px;
+    width: 184px;
   }
 `;
 
 function calcHeaderHeight(n) {
   // determine correct header height for responsive layout
-  if (n < 600) {
-    return '200px';
-  } else if (n < 800) {
-    return '35vh';
-  } else if (n < 1280) {
-    return '45vh';
+  if (n < 768) {
+    return '150px';
+  } else if (n < 1024) {
+    return '225px';
   }
-  return '55vh';
+  return '300px';
 }
 
 export default class Header extends Component {
   componentDidUpdate = (prevProps) => {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
-      const vhwidth = (window.innerWidth) ? window.innerWidth : 1281;
+      const vhwidth = (window.innerWidth) ? window.innerWidth : 2000;
       const tallheight = calcHeaderHeight(vhwidth);
+      const shortheight = '0px';
       if (this.props.location.pathname === '/') {
         // if swiching to home page, animate the hieght to 500px
         this.wrapper.animate([
           // can set as many frames as you would like, we are just using 2 to animate the vh change
-          { height: '50px' },
+          { height: shortheight },
           { height: tallheight },
         ], {
           // duration is time of animation, fill forwards means it will stay on last frame
@@ -76,10 +76,9 @@ export default class Header extends Component {
         });
       } else if (prevProps.location.pathname === '/') {
         // if swiching to another page from the home page, animate the hieght to 50px
-        console.log(prevProps.location.pathname);
         this.wrapper.animate([
           { height: tallheight },
-          { height: '50px' },
+          { height: shortheight },
         ], {
           duration: 300,
           fill: 'forwards',
@@ -94,22 +93,29 @@ export default class Header extends Component {
   render() {
     const { data, location } = this.props;
     return (
-      // ref sets this.wrapper to the DOM element of the wrapper, strange syntax
       /* eslint-disable */
-      <HeaderWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
-        <HeaderContainer>
-          <NavBar />
-        </HeaderContainer>
-        <ResponsiveImg
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-          }}
-          sizes={data.background.sizes}
-        />
-      </HeaderWrapper>
+      <div>
+        <LogoWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
+            {location.pathname === '/' && 
+              <ImgWrapper>
+                <div class='img-container'>
+                  <Img
+                    style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100%',
+                    opacity: 0.85,
+                  }}
+                    sizes={data.logo.sizes}
+                  />
+                </div>
+              </ImgWrapper>
+          }
+        </LogoWrapper>
+        <NavBar />
+      </div>
       /* eslint-enable */
+
     );
   }
 }

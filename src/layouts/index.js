@@ -55,7 +55,7 @@ export const query = graphql`
         desc
       }
     }
-    background: imageSharp(id: {regex: "/logo1920_2.jpg/"}) {
+    logo: imageSharp(id: {regex: "/md_logo.png/"}) {
       sizes(maxWidth: 1920, quality: 85) {
         ...GatsbyImageSharpSizes
       }

@@ -4,13 +4,12 @@ import styled from 'styled-components';
 
 
 const StyledNavWrapper = styled.div`
-  height: 50px;
+  height: 42px;
   width: 100%
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: #b2ced7;
-  border-top: 1px solid #8baeba;
+  background-color: #111;
 `;
 
 const StyledNav = styled.nav`
@@ -23,7 +22,7 @@ const StyledNav = styled.nav`
   a {
     text-decoration: none;
     padding-bottom: 6px;
-    color: #333;
+    color: #ddd;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: 500;
     font-size: 1.1em;
@@ -33,8 +32,8 @@ const StyledNav = styled.nav`
     -webkit-transition: 0.3s;
     transition: 0.3s;
     &:hover {
-      border-bottom: 5px solid rgba(0, 0, 0, 0.5);
-      color: #000;
+      border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+      color: #fff;
     }
   }
 `;
