@@ -65,7 +65,7 @@ export default class SecondPage extends Component {
   componentDidMount() {
     fetch(`https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=8fe8ca10f276c4ceb1869ce93a314d7b&photoset_id=${this.props.albumID}&user_id=9583362@N03&format=json&nojsoncallback=1`)
       .then(response => response.json())
-      .then(data => data.photoset.photo.map(photo => `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}`))
+      .then(data => data.photoset.photo.map(photo => `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}`).reverse())
       .then((photos) => {
         this.setState({ photos });
       });
