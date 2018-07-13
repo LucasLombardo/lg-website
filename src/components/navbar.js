@@ -36,10 +36,13 @@ const StyledNav = styled.nav`
     &:first-of-type {
       margin: 0 auto 0 0;
     }
-    @media only screen and (max-width: 300px) {
-      margin: 0 auto;
+    @media only screen and (max-width: 480px) {
+      margin: 0 10px 0 auto;
       min-width: auto;
-      &:first-of-type {
+      &:nth-of-type(1) {
+        margin: 0 auto 0 10px;
+      }
+      &:nth-of-type(2) {
         margin: 0 auto;
       }
     }
