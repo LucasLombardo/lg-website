@@ -98,7 +98,7 @@ export default class Header extends Component {
         <LogoWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
             {location.pathname === '/' && 
               <ImgWrapper>
-                <div class='img-container'>
+                <div>
                   <Img
                     style={{
                     position: 'relative',
