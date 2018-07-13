@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import ScrollUpBtn from '../../components/scrolltotop';
 
 const StyledAlbumThumb = styled.div`
     margin: 5px;
@@ -38,12 +39,14 @@ const StyledAlbumThumb = styled.div`
       }
     }
     &:hover {
-      img {
+      figure {
+        img {
           -webkit-transform: scale(1.2);
           transform: scale(1.2);
+        }
       }
       span {
-        font-size: 1.2em;
+        font-size: 1.15em;
       }
     }
   }
@@ -57,6 +60,7 @@ export default class AlbumThumnail extends Component {
     const path = `/gallery/${slug}`;
     return (
       <StyledAlbumThumb>
+        <ScrollUpBtn />
         <Link to={path}>
           <figure>
             <img src={thumnail} alt={name} />

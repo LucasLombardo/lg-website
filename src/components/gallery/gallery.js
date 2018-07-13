@@ -19,6 +19,7 @@ const StyledImg = styled.img`
 `;
 
 const StyledGal = styled.div`
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
