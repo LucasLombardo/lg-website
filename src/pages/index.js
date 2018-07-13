@@ -27,7 +27,7 @@ const StyledCol1 = styled.div`
   #gallery-link {
     font-size: 1.1em;
     font-weight: 480;
-    text-align: center;
+    text-align: left;
   }
   @media only screen and (max-width: 768px)  {
     width: 100%;
@@ -45,21 +45,24 @@ const StyledCol2 = styled.div`
 
 const StyledSocialBtns = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-top: 1em;
-  flex-wrap: wrap;
+  //set a minimum margin with div in between
+  div {
+    width: 15px;
+  }
 `;
 const StyledBtn = styled.img`
   padding: 1em;
-  margin: 7px;
-  width: 200px;
+  margin: 0 8px 0 0;
   border: 2px solid #3b5998;
-  border-radius: 1em;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  border-radius: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   &:hover {
-    background-color: #b2ced7;
+    padding: 1.05em;
+    background-color: rgba(0,0,0,0.05);
   }
 `;
 
@@ -81,10 +84,11 @@ const IndexPage = () => (
       </p>
       <StyledSocialBtns>
         <a href="https://www.facebook.com/LombardoGraphicscom-450098998346458/">
-          <StyledBtn src="http://lucaslombardo.com/hosting/find-us-on-facebook.svg" alt="Find us on Facebook" />
+          <StyledBtn src="https://cdn.rawgit.com/LucasLombardo/svg-hosting/master/facebooksvg.svg" alt="Find us on Facebook" />
         </a>
+        <div />
         <a href="https://www.flickr.com/photos/lombardographics/albums">
-          <StyledBtn src="http://lucaslombardo.com/hosting/follow-flickr.svg" alt="Follow our photostream on Flickr" />
+          <StyledBtn src="https://cdn.rawgit.com/LucasLombardo/svg-hosting/master/flickrsvg.svg" alt="Follow our photostream on Flickr" />
         </a>
       </StyledSocialBtns>
     </StyledCol1>
