@@ -29,14 +29,16 @@ const StyledBody = styled.div`
 `;
 
 const Layout = ({ children, data, location }) => (
-  <div style={{ backgroundColor: '#ddd' }}>
+  <div style={{ backgroundColor: '#eee' }}>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
-    />
+    >
+      <link rel="icon" type="image/png" href="https://imageshack.com/a/img924/3105/vso8pt.png" sizes="16x16" />
+    </Helmet>
     <Header data={data} location={location} />
     <StyledBody>
       {children()}
