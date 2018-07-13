@@ -66,6 +66,11 @@ const StyledBtn = styled.img`
   }
 `;
 
+function getYears() {
+  const dt = new Date();
+  return Number(dt.getFullYear()) - 1989;
+}
+
 const IndexPage = () => (
   <StyledHomepage>
     <StyledCol1>
@@ -76,8 +81,8 @@ const IndexPage = () => (
         airbrush work, full vehicle wraps, and custom motorcycle art.
       </p>
       <p>
-        Having been in business for over 29 years, we deliver high quality work that can make your
-        business stand out among competitors and leave a great first impression.
+        Having been in business for over {getYears()} years, we deliver high quality work that can
+        make your business stand out among competitors and leave a great first impression.
       </p>
       <p id="gallery-link" >
         <Link to="gallery">Check out our portfolio of work for some photos!</Link>
