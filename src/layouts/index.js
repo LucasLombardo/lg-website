@@ -7,6 +7,14 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import './index.css';
 
+const StyledPage = styled.div`
+  background-color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+
 // width should align with both header and footer, update
 // them as well if changing width/media queries
 const StyledBody = styled.div`
@@ -29,7 +37,7 @@ const StyledBody = styled.div`
 `;
 
 const Layout = ({ children, data, location }) => (
-  <div style={{ backgroundColor: '#eee' }}>
+  <StyledPage>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -44,7 +52,7 @@ const Layout = ({ children, data, location }) => (
       {children()}
     </StyledBody>
     <Footer />
-  </div>
+  </StyledPage>
 );
 
 Layout.propTypes = {
