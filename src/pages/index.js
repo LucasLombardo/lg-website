@@ -74,7 +74,7 @@ function getYears() {
 const IndexPage = () => (
   <StyledHomepage>
     <StyledCol1>
-      <h3>Welcome to LombardoGraphics.com!</h3>
+      <h3>Welcome to Lombardo Graphics</h3>
       <p>
         We are a vehicle graphics company located in North Andover, Ma. Our
         service offerings include truck and automobile lettering, hand painted pinstriping,
