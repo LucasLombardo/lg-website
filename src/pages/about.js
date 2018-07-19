@@ -72,7 +72,7 @@ const About = () => (
       David Lombardo.
     </p>
     <hr />
-    <StyledImg src="https://imageshack.com/a/img924/3526/hRvfC1.jpg" alt="David Lombardo with his German Shepard" />
+    <StyledImg src="https://imagizer.imageshack.us/a/img924/3526/hRvfC1.jpg" alt="David Lombardo with his German Shepard" />
     <p id="caption">
       David Lombardo (top), Blitz (bottom)
     </p>
