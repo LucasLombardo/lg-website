@@ -18,10 +18,9 @@ const StyledContactDiv = styled.div`
 
 const ContactInfo = () => (
   <StyledContactDiv>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <p><i className="fa fa-phone" /><strong>   Phone: </strong><a href="tel:1-978-688-1230">978-688-1230</a></p>
-    <p><i className="fa fa-fax" /><strong>   Fax: </strong>978-688-0188</p>
-    <p><i className="fa fa-envelope" /><strong>   Email: </strong><a href="mailto:lombardo_graphics@verizon.net">lombardo_graphics@verizon.net</a></p>
+    <p><strong>Phone: </strong><a href="tel:1-978-688-1230">978-688-1230</a></p>
+    <p><strong>Fax: </strong>978-688-0188</p>
+    <p><strong>Email: </strong><a href="mailto:lombardo_graphics@verizon.net">lombardo_graphics@verizon.net</a></p>
     <p><strong>Shop address (by appointment only) : </strong></p>
     <p>1175 Turnpike Street North Andover, MA 01845</p>
     <div className="black-border">
