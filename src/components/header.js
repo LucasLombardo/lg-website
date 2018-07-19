@@ -6,7 +6,7 @@ import NavBar from '../components/navbar';
 
 const LogoWrapper = styled.div`
   width: 100%;
-  background-image: url(https://imageshack.com/a/img921/3903/BaMl4X.jpg);
+  background-image: url(https://imagizer.imageshack.us/a/img921/3903/BaMl4X.jpg);
   background-repeat: repeat-x;
   background-position: center;
   background-color: #666;
