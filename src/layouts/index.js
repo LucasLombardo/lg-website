@@ -45,7 +45,7 @@ const Layout = ({ children, data, location }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     >
-      <link rel="icon" type="image/png" href="https://imageshack.com/a/img924/3105/vso8pt.png" sizes="16x16" />
+      <link rel="icon" type="image/png" href="https://imagizer.imageshack.us/a/img924/3105/vso8pt.png" sizes="16x16" />
     </Helmet>
     <Header data={data} location={location} />
     <StyledBody>

@@ -82,7 +82,7 @@ const About = () => (
         He is blessed with a loving wife, Jeanne Lombardo, who helps out with
         the graphic design and administration parts of the business. Outside of
         work, David enjoys working on his 1958 corvette, excercising, and
-        walking his German Shepard, Blitz.
+        walking his German Shepherd, Blitz.
       </p>
     </StyledCard>
     <p className="center-text">
