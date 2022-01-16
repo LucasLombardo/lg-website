@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-import Header from '../components/header'
+// import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.css'
 
@@ -39,11 +39,11 @@ const StyledBody = styled.div`
 const Layout = ({ children, data, location }) => (
   <StyledPage>
     <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
+      // title={data.site.siteMetadata.title}
+      // meta={[
+      //   { name: 'description', content: 'Sample' },
+      //   { name: 'keywords', content: 'sample, something' },
+      // ]}
     >
       <link
         rel="icon"
@@ -52,8 +52,8 @@ const Layout = ({ children, data, location }) => (
         sizes="16x16"
       />
     </Helmet>
-    <Header data={data} location={location} />
-    <StyledBody>{children()}</StyledBody>
+    {/* <Header data={data} location={location} /> */}
+    <StyledBody>{children}</StyledBody>
     <Footer />
   </StyledPage>
 )

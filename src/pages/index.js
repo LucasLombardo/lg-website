@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import ContactInfo from '../components/contactinfo'
+import Layout from '../layouts'
 
 const StyledHomepage = styled.div`
   display: flex;
@@ -72,45 +73,47 @@ function getYears() {
 }
 
 const IndexPage = () => (
-  <StyledHomepage>
-    <StyledCol1>
-      <h3>Welcome to Lombardo Graphics</h3>
-      <p>
-        We are a vehicle graphics company located in North Andover, Ma. Our
-        service offerings include truck and automobile lettering, hand painted
-        pinstriping, airbrush work, full vehicle wraps, and custom motorcycle
-        art.
-      </p>
-      <p>
-        Having been in business for over {getYears()} years, we deliver high
-        quality work that can make your business stand out among competitors and
-        leave a great first impression.
-      </p>
-      <p id="gallery-link">
-        <Link to="gallery">
-          Check out our portfolio of work for some photos!
-        </Link>
-      </p>
-      <StyledSocialBtns>
-        <a href="https://www.facebook.com/LombardoGraphicscom-450098998346458/">
-          <StyledBtn
-            src="https://cdn.rawgit.com/LucasLombardo/svg-hosting/master/facebooksvg.svg"
-            alt="Find us on Facebook"
-          />
-        </a>
-        <div />
-        <a href="https://www.flickr.com/photos/lombardographics/albums">
-          <StyledBtn
-            src="https://cdn.rawgit.com/LucasLombardo/svg-hosting/master/flickrsvg.svg"
-            alt="Follow our photostream on Flickr"
-          />
-        </a>
-      </StyledSocialBtns>
-    </StyledCol1>
-    <StyledCol2>
-      <ContactInfo />
-    </StyledCol2>
-  </StyledHomepage>
+  <Layout>
+    <StyledHomepage>
+      <StyledCol1>
+        <h3>Welcome to Lombardo Graphics</h3>
+        <p>
+          We are a vehicle graphics company located in North Andover, Ma. Our
+          service offerings include truck and automobile lettering, hand painted
+          pinstriping, airbrush work, full vehicle wraps, and custom motorcycle
+          art.
+        </p>
+        <p>
+          Having been in business for over {getYears()} years, we deliver high
+          quality work that can make your business stand out among competitors and
+          leave a great first impression.
+        </p>
+        <p id="gallery-link">
+          <Link to="gallery">
+            Check out our portfolio of work for some photos!
+          </Link>
+        </p>
+        <StyledSocialBtns>
+          <a href="https://www.facebook.com/LombardoGraphicscom-450098998346458/">
+            <StyledBtn
+              src="https://cdn.rawgit.com/LucasLombardo/svg-hosting/master/facebooksvg.svg"
+              alt="Find us on Facebook"
+            />
+          </a>
+          <div />
+          <a href="https://www.flickr.com/photos/lombardographics/albums">
+            <StyledBtn
+              src="https://cdn.rawgit.com/LucasLombardo/svg-hosting/master/flickrsvg.svg"
+              alt="Follow our photostream on Flickr"
+            />
+          </a>
+        </StyledSocialBtns>
+      </StyledCol1>
+      <StyledCol2>
+        <ContactInfo />
+      </StyledCol2>
+    </StyledHomepage>
+  </Layout>
 )
 
 export default IndexPage
