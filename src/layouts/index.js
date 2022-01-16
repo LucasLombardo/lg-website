@@ -1,7 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -36,30 +36,32 @@ const StyledBody = styled.div`
   }
 `
 
-const Layout = ({ children, data, location }) => (
-  <StyledPage>
-    <Helmet
-    // title={data.site.siteMetadata.title}
-    // meta={[
-    //   { name: 'description', content: 'Sample' },
-    //   { name: 'keywords', content: 'sample, something' },
-    // ]}
-    >
-      <link
-        rel="icon"
-        type="image/png"
-        href="https://imagizer.imageshack.us/a/img924/3105/vso8pt.png"
-        sizes="16x16"
-      />
-    </Helmet>
-    <Header data={data} location={location} />
-    <StyledBody>{children}</StyledBody>
-    <Footer />
-  </StyledPage>
-)
+const Layout = ({ children, location }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
 
-Layout.propTypes = {
-  children: PropTypes.func.isRequired,
+  return (
+    <StyledPage>
+      <Helmet title={data.site.siteMetadata.title}>
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://imagizer.imageshack.us/a/img924/3105/vso8pt.png"
+          sizes="16x16"
+        />
+      </Helmet>
+      <Header data={data} location={location} />
+      <StyledBody>{children}</StyledBody>
+      <Footer />
+    </StyledPage>
+  )
 }
 
 export default Layout
