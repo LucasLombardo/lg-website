@@ -27,6 +27,7 @@
   ],
   "license": "Copyright © Lombardo Graphics. All rights reserved",
   "scripts": {
+    "start": "gatsby serve",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
