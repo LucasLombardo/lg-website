@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import AlbumImages from '../../components/gallery/albumImages';
-import ScrollUpBtn from '../../components/scrolltotop';
+import React from 'react'
+import Link from 'gatsby-link'
+import AlbumImages from '../../components/gallery/albumImages'
+import ScrollUpBtn from '../../components/scrolltotop'
 
-const flickrAlbumID = '72157600626328615';
+const flickrAlbumID = '72157600626328615'
 
 const Boats = () => (
   <div>
@@ -12,6 +12,6 @@ const Boats = () => (
     <Link to="/gallery">Back to albums</Link>
     <AlbumImages albumID={flickrAlbumID} />
   </div>
-);
+)
 
-export default Boats;
+export default Boats

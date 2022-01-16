@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import styled from 'styled-components';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import styled from 'styled-components'
 // import Img from 'gatsby-image';
-import NavBar from '../components/navbar';
+import NavBar from '../components/navbar'
 
 const LogoWrapper = styled.div`
   width: 100%;
@@ -26,7 +26,7 @@ const LogoWrapper = styled.div`
       max-width: 345px;
     }
   }
-`;
+`
 
 const ImgWrapper = styled.div`
   width: 690px;
@@ -42,16 +42,16 @@ const ImgWrapper = styled.div`
     height: 80px;
     width: 184px;
   }
-`;
+`
 
 function calcHeaderHeight(n) {
   // determine correct header height for responsive layout
   if (n < 768) {
-    return '150px';
+    return '150px'
   } else if (n < 1024) {
-    return '225px';
+    return '225px'
   }
-  return '300px';
+  return '300px'
 }
 
 /* export default class Header extends Component {
@@ -90,10 +90,10 @@ function calcHeaderHeight(n) {
   } */
 
 const Header = () => {
-    /* const { data, location } = this.props; */
-    return (
-      <div>
-{/**         <LogoWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
+  /* const { data, location } = this.props; */
+  return (
+    <div>
+      {/**         <LogoWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
             {location.pathname === '/' && 
               <ImgWrapper>
                 <div>
@@ -110,10 +110,9 @@ const Header = () => {
               </ImgWrapper>
           }
         </LogoWrapper>**/}
-        <NavBar />
-      </div>
-    );
-  }
-
+      <NavBar />
+    </div>
+  )
+}
 
 export default Header

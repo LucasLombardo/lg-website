@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Gallery from '../gallery/gallery';
+import React, { Component } from 'react'
+import Gallery from '../gallery/gallery'
 
 function makeFlickrSrc(base, size) {
   // takes base url and appends size suffix
@@ -52,10 +52,10 @@ function makeFlickrSrc(base, size) {
     'https://farm2.staticflickr.com/1328/708351788_ef36dfccea',
     'https://farm2.staticflickr.com/1287/708351838_a1a25d51ea',
     'https://farm2.staticflickr.com/1297/708351904_d0de5836dd',
-  ];
+  ]
   // imgs uploaded pre 2012 don't have b suffix unless orig image was large, filter 48 legacy imgs
-  if (size === 'b' && noLarge.indexOf(base) !== -1) return `${base}_z.jpg`;
-  return `${base}_${size}.jpg`;
+  if (size === 'b' && noLarge.indexOf(base) !== -1) return `${base}_z.jpg`
+  return `${base}_${size}.jpg`
 }
 
 export default class SecondPage extends Component {
@@ -63,30 +63,39 @@ export default class SecondPage extends Component {
     photos: [],
   }
   componentDidMount() {
-    fetch(`https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=8fe8ca10f276c4ceb1869ce93a314d7b&photoset_id=${this.props.albumID}&user_id=9583362@N03&format=json&nojsoncallback=1`)
-      .then(response => response.json())
-      .then(data => data.photoset.photo.map(photo => `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}`).reverse())
+    fetch(
+      `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=8fe8ca10f276c4ceb1869ce93a314d7b&photoset_id=${this.props.albumID}&user_id=9583362@N03&format=json&nojsoncallback=1`
+    )
+      .then((response) => response.json())
+      .then((data) =>
+        data.photoset.photo
+          .map(
+            (photo) =>
+              `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}`
+          )
+          .reverse()
+      )
       .then((photos) => {
-        this.setState({ photos });
-      });
+        this.setState({ photos })
+      })
   }
   render() {
     return (
       <div>
         <Gallery
-          images={this.state.photos.map(base => ({
-          src: makeFlickrSrc(base, 'c'),
-          srcSet: [
-            `${makeFlickrSrc(base, 'b')} 1024w`,
-            `${makeFlickrSrc(base, 'z')} 640w`,
-            `${makeFlickrSrc(base, 'n')} 320w`,
-        ],
-          thumbnail: makeFlickrSrc(base, 'q'),
-        }))}
+          images={this.state.photos.map((base) => ({
+            src: makeFlickrSrc(base, 'c'),
+            srcSet: [
+              `${makeFlickrSrc(base, 'b')} 1024w`,
+              `${makeFlickrSrc(base, 'z')} 640w`,
+              `${makeFlickrSrc(base, 'n')} 320w`,
+            ],
+            thumbnail: makeFlickrSrc(base, 'q'),
+          }))}
           showThumbnails
           backdropClosesModal
         />
       </div>
-    );
+    )
   }
 }

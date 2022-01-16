@@ -39,11 +39,11 @@ const StyledBody = styled.div`
 const Layout = ({ children, data, location }) => (
   <StyledPage>
     <Helmet
-      // title={data.site.siteMetadata.title}
-      // meta={[
-      //   { name: 'description', content: 'Sample' },
-      //   { name: 'keywords', content: 'sample, something' },
-      // ]}
+    // title={data.site.siteMetadata.title}
+    // meta={[
+    //   { name: 'description', content: 'Sample' },
+    //   { name: 'keywords', content: 'sample, something' },
+    // ]}
     >
       <link
         rel="icon"
