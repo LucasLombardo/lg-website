@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-// import Header from '../components/header'
+import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.css'
 
@@ -52,7 +52,7 @@ const Layout = ({ children, data, location }) => (
         sizes="16x16"
       />
     </Helmet>
-    {/* <Header data={data} location={location} /> */}
+    <Header data={data} location={location} />
     <StyledBody>{children}</StyledBody>
     <Footer />
   </StyledPage>

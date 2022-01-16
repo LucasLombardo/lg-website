@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import NavBar from '../components/navbar';
 
 const LogoWrapper = styled.div`
@@ -54,7 +54,7 @@ function calcHeaderHeight(n) {
   return '300px';
 }
 
-export default class Header extends Component {
+/* export default class Header extends Component {
   componentDidUpdate = (prevProps) => {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
@@ -87,15 +87,13 @@ export default class Header extends Component {
         });
       }
     }
-  }
+  } */
 
-
-  render() {
-    const { data, location } = this.props;
+const Header = () => {
+    /* const { data, location } = this.props; */
     return (
-      /* eslint-disable */
       <div>
-        <LogoWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
+{/**         <LogoWrapper ref={wrapper => this.wrapper = ReactDOM.findDOMNode(wrapper)} isHome={location.pathname === '/'}>
             {location.pathname === '/' && 
               <ImgWrapper>
                 <div>
@@ -111,11 +109,11 @@ export default class Header extends Component {
                 </div>
               </ImgWrapper>
           }
-        </LogoWrapper>
+        </LogoWrapper>**/}
         <NavBar />
       </div>
-      /* eslint-enable */
-
     );
   }
-}
+
+
+export default Header
