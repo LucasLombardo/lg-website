@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import ContactInfo from '../components/contactinfo'
-import Layout from '../layouts'
 
 const StyledHomepage = styled.div`
   display: flex;
@@ -73,7 +72,6 @@ function getYears() {
 }
 
 const IndexPage = () => (
-  <Layout>
     <StyledHomepage>
       <StyledCol1>
         <h3>Welcome to Lombardo Graphics</h3>
@@ -113,7 +111,6 @@ const IndexPage = () => (
         <ContactInfo />
       </StyledCol2>
     </StyledHomepage>
-  </Layout>
 )
 
 export default IndexPage
