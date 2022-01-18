@@ -100,6 +100,3 @@ const About = () => (
 )
 
 export default About
-
-// width="560"
-// height="315"
