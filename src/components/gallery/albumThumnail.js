@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
-import ScrollUpBtn from '../../components/scrolltotop';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import Link from 'gatsby-link'
+import ScrollUpBtn from '../../components/scrolltotop'
 
 const StyledAlbumThumb = styled.div`
     margin: 5px;
@@ -50,24 +50,26 @@ const StyledAlbumThumb = styled.div`
       }
     }
   }
-`;
+`
 
 /* eslint-disable */
 
 export default class AlbumThumnail extends Component {
   render() {
-    const { thumnail, name, slug } = this.props;
-    const path = `/gallery/${slug}`;
+    const { thumnail, name, slug } = this.props
+    const path = `/gallery/${slug}`
     return (
       <StyledAlbumThumb>
         <ScrollUpBtn />
         <Link to={path}>
           <figure>
             <img src={thumnail} alt={name} />
-          </figure><div className="desc"><span>{name}</span></div>
+          </figure>
+          <div className="desc">
+            <span>{name}</span>
+          </div>
         </Link>
       </StyledAlbumThumb>
-    );
+    )
   }
 }
-

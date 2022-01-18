@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const StyledAbtPage = styled.div`
   width: 80%;
@@ -19,31 +19,31 @@ const StyledAbtPage = styled.div`
   #caption {
     text-align: center;
     text-indent: 0;
-    font-size: .9em;
+    font-size: 0.9em;
     margin: 0 0 1em 0;
     padding: 0;
   }
-  @media only screen and (max-width: 690px)  {
+  @media only screen and (max-width: 690px) {
     width: 475px;
     width: 90%;
   }
-`;
+`
 
 const StyledImg = styled.img`
   padding: 5px;
   margin-bottom: 0;
-  border: solid 1px #CCC;
+  border: solid 1px #ccc;
   -moz-box-shadow: 1px 1px 5px #999;
   -webkit-box-shadow: 1px 1px 5px #999;
   box-shadow: 1px 1px 5px #999;
   width: 300px;
-`;
+`
 
 const StyledCard = styled.div`
   -moz-box-shadow: 1px 1px 5px #999;
   -webkit-box-shadow: 1px 1px 5px #999;
   box-shadow: 1px 1px 5px #999;
-`;
+`
 
 const StyledVid = styled.iframe`
   width: 540px;
@@ -52,47 +52,51 @@ const StyledVid = styled.iframe`
   -moz-box-shadow: 4px 4px 14px #999;
   -webkit-box-shadow: 4px 4px 14px #999;
   box-shadow: 4px 4px 14px #999;
-  @media only screen and (max-width: 1024px)  {
+  @media only screen and (max-width: 1024px) {
     width: 400px;
     height: 225px;
   }
-  @media only screen and (max-width: 690px)  {
+  @media only screen and (max-width: 690px) {
     width: 240px;
     height: 135px;
   }
-`;
+`
 
 const About = () => (
   <StyledAbtPage>
     <h1>About Us</h1>
     <hr />
     <p className="center-text">
-      Lombardo Graphics is a local business that has been serving the
-      Greater Boston area since 1989. It is owned and operated by
-      David Lombardo.
+      Lombardo Graphics is a local business that has been serving the Greater
+      Boston area since 1989. It is owned and operated by David Lombardo.
     </p>
     <hr />
-    <StyledImg src="https://imagizer.imageshack.us/a/img924/3526/hRvfC1.jpg" alt="David Lombardo with his German Shepard" />
-    <p id="caption">
-      David Lombardo (top), Blitz (bottom)
-    </p>
+    <StyledImg
+      src="https://imagizer.imageshack.us/a/img924/3526/hRvfC1.jpg"
+      alt="David Lombardo with his German Shepard"
+    />
+    <p id="caption">David Lombardo (top), Blitz (bottom)</p>
     <StyledCard>
       <p>
-        David graduated from Butera School of Art and Design in 1989.
-        He is blessed with a loving wife, Jeanne Lombardo, who helps out with
-        the graphic design and administration parts of the business. Outside of
+        David graduated from Butera School of Art and Design in 1989. He is
+        blessed with a loving wife, Jeanne Lombardo, who helps out with the
+        graphic design and administration parts of the business. Outside of
         work, David enjoys working on his 1958 corvette, excercising, and
         walking his German Shepherd, Blitz.
       </p>
     </StyledCard>
     <p className="center-text">
-      You can check out this video of him working on a Hummer for the Boston Bruins below:
+      You can check out this video of him working on a Hummer for the Boston
+      Bruins below:
     </p>
-    <StyledVid title="buzz video" src="https://www.youtube-nocookie.com/embed/lOYPD5r1Qhc?rel=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen />
+    <StyledVid
+      title="buzz video"
+      src="https://www.youtube-nocookie.com/embed/lOYPD5r1Qhc?rel=0"
+      frameBorder="0"
+      allow="autoplay; encrypted-media"
+      allowFullScreen
+    />
   </StyledAbtPage>
-);
+)
 
-export default About;
-
-// width="560"
-// height="315"
+export default About

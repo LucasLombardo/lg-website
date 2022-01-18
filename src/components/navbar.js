@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'styled-components';
-
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const StyledNavWrapper = styled.div`
   height: 42px;
@@ -10,7 +9,7 @@ const StyledNavWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   background-color: #111;
-`;
+`
 
 const StyledNav = styled.nav`
   height: 45px;
@@ -22,7 +21,8 @@ const StyledNav = styled.nav`
     min-width: 65px;
     text-align: center;
     color: #ddd;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: 500;
     font-size: 1.1em;
     border-bottom: 5px solid rgba(0, 0, 0, 0);
@@ -59,16 +59,16 @@ const StyledNav = styled.nav`
   @media only screen and (max-width: 480px) {
     width: 100%;
   }
-`;
+`
 
 const NavBar = () => (
   <StyledNavWrapper>
     <StyledNav>
       <Link to="/"> Home </Link>
-      <Link to="/Gallery"> Gallery </Link>
-      <Link to="/About"> About </Link>
+      <Link to="/gallery"> Gallery </Link>
+      <Link to="/about"> About </Link>
     </StyledNav>
   </StyledNavWrapper>
-);
+)
 
-export default NavBar;
+export default NavBar

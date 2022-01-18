@@ -1,21 +1,14 @@
-import React from 'react';
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from 'react-google-maps';
+import React from 'react'
 
-/* eslint-disable */
-const MapWithAMarker = withScriptjs(withGoogleMap(props => (
-  <GoogleMap
-    defaultZoom={12}
-    defaultCenter={{ lat: 42.650402, lng: -71.096469 }}
-  >
-    <Marker
-      position={{ lat: 42.650402, lng: -71.096469 }}
-    />
-  </GoogleMap>),
-));
+const Map = () => (
+  <iframe
+    width="100%"
+    height="300"
+    style={{ border: 0, padding: 0, margin: 0 }}
+    loading="lazy"
+    src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyB788qDv6haJe-EMkwnz4C_tNRzr0mCWxg&q=1175+Turnpike+St,+North+Andover,+MA+01845`}
+    allowfullscreen
+  ></iframe>
+)
 
-export default MapWithAMarker;
+export default Map
