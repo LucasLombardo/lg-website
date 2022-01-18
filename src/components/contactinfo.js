@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import MapWithAMarker from '../components/map';
+import Map from '../components/map'
 
 const StyledContactDiv = styled.div`
   p {
@@ -13,6 +13,7 @@ const StyledContactDiv = styled.div`
   }
   .black-border {
     border: 1px solid #111;
+    height: 302px;
   }
 `
 
@@ -36,12 +37,7 @@ const ContactInfo = () => (
     </p>
     <p>1175 Turnpike Street North Andover, MA 01845</p>
     <div className="black-border">
-      {/* <MapWithAMarker
-        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3mhE1yT1aaaiLzBJ1tX5xpGMEOSXwd5o&v=3.exp&libraries=geometry,drawing,places"
-        loadingElement={<div style={{ height: '100%' }} />}
-        containerElement={<div style={{ height: '300px' }} />}
-        mapElement={<div style={{ height: '100%' }} />}
-      /> */}
+      <Map />
     </div>
     <p>
       <strong>Mailing address: </strong>
