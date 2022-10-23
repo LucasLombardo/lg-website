@@ -49,7 +49,12 @@ const Layout = ({ children, location }) => {
 
   return (
     <StyledPage>
-      <Helmet title={data.site.siteMetadata.title}>
+      <Helmet
+        htmlAttributes={{
+          lang: 'en',
+        }}
+        title={data.site.siteMetadata.title}
+      >
         <link
           rel="icon"
           type="image/png"

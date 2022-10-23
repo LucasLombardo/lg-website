@@ -2,6 +2,7 @@ import React from 'react'
 
 const Map = () => (
   <iframe
+    title="Google Maps Locationxs"
     width="100%"
     height="300"
     style={{ border: 0, padding: 0, margin: 0 }}

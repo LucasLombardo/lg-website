@@ -21,10 +21,7 @@ const ContactInfo = () => (
   <StyledContactDiv>
     <p>
       <strong>Phone: </strong>
-      <a href="tel:1-978-688-1230">978-688-1230</a>
-    </p>
-    <p>
-      <strong>Fax: </strong>978-688-0188
+      <a href="tel:1-978-430-7341">978-430-7341</a>
     </p>
     <p>
       <strong>Email: </strong>
